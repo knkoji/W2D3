@@ -8,14 +8,15 @@ class Deck
   attr_reader :cards
   def initialize
     @cards = []
+
+  end
+
+  def populate_cards
     SUITS.each do |suit|
       VALUES.each do |value|
         @cards << Card.new(value, suit)
       end
     end
-
   end
-
-
 
 end
